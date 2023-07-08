@@ -1,6 +1,4 @@
-#ifndef PROPERTY_H
-#define PROPERTY_H
-
+#pragma once
 #include <string>
 
 // Property object representing an individual property object from the Alachua County data
@@ -59,5 +57,3 @@ public:
 
     void setPropertyType(const std::string &newPropertyType);
 };
-
-#endif // PROPERTY_H
