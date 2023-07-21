@@ -9,11 +9,18 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(src)
-include_directories(src/gui)
+include_directories(
+        src
+        src/gui
+        libs/QGeoView/include
+        libs/QGeoView/src
+    )
+
+link_directories(${CMAKE_SOURCE_DIR}/libs/QGeoView/bin)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Network)
 
 set(PROJECT_SOURCES
         src/main.cpp
@@ -47,7 +54,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(AlachuaHousing PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(AlachuaHousing PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt6::Network libqgeoview.dll.a)
 
 set_target_properties(AlachuaHousing PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
