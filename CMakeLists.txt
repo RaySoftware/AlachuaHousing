@@ -27,6 +27,10 @@ set(PROJECT_SOURCES
         src/gui/mainwindow.cpp
         src/gui/mainwindow.h
         src/gui/mainwindow.ui
+        src/gui/searchframe.cpp
+        src/gui/searchframe.h
+        src/gui/selectedpropertyframe.cpp
+        src/gui/selectedpropertyframe.h
         src/property.cpp
         src/property.h
 )
@@ -34,6 +38,7 @@ set(PROJECT_SOURCES
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(AlachuaHousing
         MANUAL_FINALIZATION
+        resources/resources.qrc
         ${PROJECT_SOURCES}
     )
 # Define target properties for Android with Qt 6 as:
