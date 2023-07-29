@@ -9,5 +9,6 @@
         <file>images/house.png</file>
         <file>images/money.png</file>
         <file>images/redpin.png</file>
+        <file>images/icon.ico</file>
     </qresource>
 </RCC>

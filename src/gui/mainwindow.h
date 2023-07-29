@@ -5,6 +5,7 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QGeoView/QGVMap.h>
+#include "mapframe.h"
 #include "searchframe.h"
 #include "selectedpropertyframe.h"
 
@@ -16,13 +17,13 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-    QGVMap* map;
-
     QWidget* mainWidget;
 
     QHBoxLayout* mainLayout;
 
     QVBoxLayout* mapInfoLayout;
+
+    MapFrame* mapFrame;
 
     SearchFrame* searchFrame;
 
