@@ -66,12 +66,10 @@ SearchFrame::SearchFrame()
 
     // ======= Table section: Property results =======
     this->propertyTable = new QTableWidget();
-    QStringList headerTitles = {"Market Value", "City", "Zip Code", "Year Built", "Address"};
-    this->propertyTable->insertColumn(0);
-    this->propertyTable->insertColumn(1);
-    this->propertyTable->insertColumn(2);
-    this->propertyTable->insertColumn(3);
-    this->propertyTable->insertColumn(4);
+    QStringList headerTitles = {"Market Value", "City", "Zip Code", "Year Built", "Address", "Property Type"};
+    for (int i = 0; i < headerTitles.size(); i++)
+        this->propertyTable->insertColumn(i);
+
     this->propertyTable->verticalHeader()->hide();
     this->propertyTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
     this->propertyTable->setHorizontalHeaderLabels(headerTitles);
