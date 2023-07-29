@@ -27,10 +27,14 @@ set(PROJECT_SOURCES
         src/gui/mainwindow.cpp
         src/gui/mainwindow.h
         src/gui/mainwindow.ui
+        src/gui/mapframe.cpp
+        src/gui/mapframe.h
         src/gui/searchframe.cpp
         src/gui/searchframe.h
         src/gui/selectedpropertyframe.cpp
         src/gui/selectedpropertyframe.h
+        src/gui/mappin.cpp
+        src/gui/mappin.h
         src/property.cpp
         src/property.h
 )
